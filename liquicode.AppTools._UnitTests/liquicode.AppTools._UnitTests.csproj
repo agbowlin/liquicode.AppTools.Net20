@@ -87,24 +87,6 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\liquicode.AppTools.Ciphers\liquicode.AppTools.Ciphers.csproj">
-      <Project>{1190B3A2-50FE-48F9-B01B-73AB06A41A75}</Project>
-      <Name>andraste.SysCore.Ciphers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\liquicode.AppTools.DataManagement\liquicode.AppTools.DataManagement.csproj">
-      <Project>{98ED449A-1F17-4ED9-8D20-E2BB812E17AD}</Project>
-      <Name>andraste.SysCore.DataManagement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\liquicode.AppTools.DataStructures\liquicode.AppTools.DataStructures.csproj">
-      <Project>{D183C9EB-3288-4614-8938-7ABA3471AD88}</Project>
-      <Name>andraste.SysCore.DataStructures</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\liquicode.AppTools.Dictionaries\liquicode.AppTools.Dictionaries.csproj">
-      <Project>{B2A83E06-A1CC-4176-8D50-941A3F33F846}</Project>
-      <Name>andraste.SysCore.Dictionaries</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
       <Visible>False</Visible>
       <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
@@ -120,6 +102,24 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\liquicode.AppTools.Ciphers\liquicode.AppTools.Ciphers.csproj">
+      <Project>{1190B3A2-50FE-48F9-B01B-73AB06A41A75}</Project>
+      <Name>liquicode.AppTools.Ciphers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\liquicode.AppTools.DataManagement\liquicode.AppTools.DataManagement.csproj">
+      <Project>{98ED449A-1F17-4ED9-8D20-E2BB812E17AD}</Project>
+      <Name>liquicode.AppTools.DataManagement</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\liquicode.AppTools.DataStructures\liquicode.AppTools.DataStructures.csproj">
+      <Project>{D183C9EB-3288-4614-8938-7ABA3471AD88}</Project>
+      <Name>liquicode.AppTools.DataStructures</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\liquicode.AppTools.Dictionaries\liquicode.AppTools.Dictionaries.csproj">
+      <Project>{B2A83E06-A1CC-4176-8D50-941A3F33F846}</Project>
+      <Name>liquicode.AppTools.Dictionaries</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
