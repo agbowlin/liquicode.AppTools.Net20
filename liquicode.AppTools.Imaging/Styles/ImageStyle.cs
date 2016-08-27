@@ -35,7 +35,7 @@ namespace liquicode.AppTools
 
 
 			//-----------------------------------------------------
-			public void Draw( Graphics Graphics, Rectangle Rectangle, Image Image )
+			public Rectangle Draw( Graphics Graphics, Rectangle Rectangle, Image Image )
 			{
 				if( (this.ImagingOptions != null) )
 					this.ImagingOptions.CopyTo( Graphics );
@@ -62,7 +62,7 @@ namespace liquicode.AppTools
 					// No image.
 				}
 				// Return
-				return;
+				return rectImage;
 			}
 
 

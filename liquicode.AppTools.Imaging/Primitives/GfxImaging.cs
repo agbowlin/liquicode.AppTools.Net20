@@ -94,75 +94,177 @@ namespace liquicode.AppTools
 
 
 		//-----------------------------------------------------
-		public static Image GetImagePreview( Image Image_in, int PreviewSize_in, int PreviewDepth_in, Color PreviewBackcolor_in )
+		public static PixelFormat ImageDepth2PixelFormat( int ImageDepth )
 		{
-
-			//Return Image_in.GetThumbnailImage(PreviewSize_in, PreviewSize_in, New Drawing.Image.GetThumbnailImageAbort(AddressOf Me._GetThumbnailImageAbort), IntPtr.Zero)
-
 			// Get the image pixel format.
-			PixelFormat formatPreview = PixelFormat.DontCare;
-			if( (PreviewDepth_in <= 1) )
+			if( (ImageDepth <= 1) )
 			{
-				formatPreview = PixelFormat.Format1bppIndexed;
+				return PixelFormat.Format1bppIndexed;
 			}
-			else if( (PreviewDepth_in <= 4) )
+			else if( (ImageDepth <= 4) )
 			{
-				formatPreview = PixelFormat.Format4bppIndexed;
+				return PixelFormat.Format4bppIndexed;
 			}
-			else if( (PreviewDepth_in <= 8) )
+			else if( (ImageDepth <= 8) )
 			{
-				formatPreview = PixelFormat.Format8bppIndexed;
+				return PixelFormat.Format8bppIndexed;
 			}
-			else if( (PreviewDepth_in <= 16) )
+			else if( (ImageDepth <= 16) )
 			{
-				formatPreview = PixelFormat.Format16bppArgb1555;
+				return PixelFormat.Format16bppArgb1555;
 			}
-			else if( (PreviewDepth_in <= 24) )
+			else if( (ImageDepth <= 24) )
 			{
-				formatPreview = PixelFormat.Format24bppRgb;
+				return PixelFormat.Format24bppRgb;
 			}
-			else if( (PreviewDepth_in <= 32) )
+			else if( (ImageDepth <= 32) )
 			{
-				formatPreview = PixelFormat.Format32bppArgb;
+				return PixelFormat.Format32bppArgb;
 			}
-			else if( (PreviewDepth_in <= 48) )
+			else if( (ImageDepth <= 48) )
 			{
-				formatPreview = PixelFormat.Format48bppRgb;
+				return PixelFormat.Format48bppRgb;
 			}
-			else if( (PreviewDepth_in <= 64) )
+			else if( (ImageDepth <= 64) )
 			{
-				formatPreview = PixelFormat.Format64bppArgb;
+				return PixelFormat.Format64bppArgb;
 			}
 			else
 			{
-				formatPreview = PixelFormat.Format24bppRgb;
+				return PixelFormat.Format24bppRgb;
 			}
+		}
+
+
+		//-----------------------------------------------------
+		public static Image GetImagePreview(
+								Image Image_in
+								, int PreviewSize_in
+								, int PreviewDepth_in
+								, Color PreviewBackcolor_in )
+		{
+			// Get the image pixel format.
+			PixelFormat formatPreview = Imaging.ImageDepth2PixelFormat( PreviewDepth_in );
 
 			// Determine the preview layout.
-			Rectangle rectImage = new Rectangle( 0, 0, Image_in.Width, Image_in.Height );
-			Rectangle rectPreview = new Rectangle( 0, 0, PreviewSize_in, PreviewSize_in );
-			Rectangle rectPreviewDraw = GetImagePreviewRect( Image_in, PreviewSize_in );
+			Rectangle rect_image = new Rectangle( 0, 0, Image_in.Width, Image_in.Height );
+			Rectangle rect_preview = new Rectangle( 0, 0, PreviewSize_in, PreviewSize_in );
+			Rectangle rect_preview_draw = GetImagePreviewRect( Image_in, PreviewSize_in );
 
 			// Create the preview image.
-			Image imagePreview = new Bitmap( PreviewSize_in, PreviewSize_in, formatPreview );
+			Image image_preview = new Bitmap( PreviewSize_in, PreviewSize_in, formatPreview );
 
 			// Create the preview graphics.
-			Graphics gfxPreview = Graphics.FromImage( imagePreview );
+			Graphics gfxPreview = Graphics.FromImage( image_preview );
 			gfxPreview.InterpolationMode = InterpolationMode.HighQualityBicubic;
 			gfxPreview.CompositingQuality = CompositingQuality.HighQuality;
-#if( NodeTransparency == True)
+
 			gfxPreview.CompositingMode = CompositingMode.SourceCopy;
-			gfxPreview.FillRectangle( new SolidBrush( Color.FromArgb( 255, 255, 255, 255 ) ), rectPreview );
-#else
-			gfxPreview.FillRectangle(new SolidBrush(PreviewBackcolor_in), rectPreview);
-#endif
+			gfxPreview.FillRectangle( new SolidBrush( Color.FromArgb( 255, 255, 255, 255 ) ), rect_preview );
+			//gfxPreview.FillRectangle(new SolidBrush(PreviewBackcolor_in), rectPreview);
 
 			// Render the image to the preview.
-			gfxPreview.DrawImage( Image_in, rectPreviewDraw, rectImage, GraphicsUnit.Pixel );
+			gfxPreview.DrawImage( Image_in, rect_preview_draw, rect_image, GraphicsUnit.Pixel );
 
 			// Return, OK
 			gfxPreview.Dispose();
-			return imagePreview;
+			return image_preview;
+
+		}
+
+
+		////-----------------------------------------------------
+		//public static Rectangle GetImagePreviewRect( Image Image_in, int MaxWidth, int MaxHeight )
+		//{
+		//    double aspect_ratio = ((double)Image_in.Width / (double)Image_in.Height);
+
+		//    int delta_width = MaxWidth - Image_in.Width;
+		//    int delta_height = MaxHeight - Image_in.Height;
+
+		//    if( (delta_width >= 0) && (delta_height >= 0) )
+		//    {
+		//        // Image is smaller than preview area.
+		//    }
+
+		//    Rectangle rect = new Rectangle();
+		//    if( (Image_in.Width > Image_in.Height) )
+		//    {
+		//        rect.Size = new Size( PreviewSize_in, Convert.ToInt32( PreviewSize_in / aspect_ratio ) );
+		//    }
+		//    else
+		//    {
+		//        rect.Size = new Size( Convert.ToInt32( PreviewSize_in * aspect_ratio ), PreviewSize_in );
+		//    }
+		//    rect.Offset( Convert.ToInt32( (PreviewSize_in / 2) - (rect.Width / 2) ), Convert.ToInt32( (PreviewSize_in / 2) - (rect.Height / 2) ) );
+		//    return rect;
+		//}
+
+
+		//-----------------------------------------------------
+		public static Image GetImagePreview(
+								Image OriginalImage
+								, Size MaxSize
+								, int Depth )
+		{
+			// Get the image pixel format.
+			PixelFormat pixel_format = Imaging.ImageDepth2PixelFormat( Depth );
+
+			// Determine the preview layout.
+			Rectangle rect_image = new Rectangle( 0, 0, OriginalImage.Width, OriginalImage.Height );
+			Rectangle rect_preview_area = new Rectangle( 0, 0, MaxSize.Width, MaxSize.Height );
+
+			Rectangle rect_preview;
+			int delta_width = MaxSize.Width - OriginalImage.Width;
+			int delta_height = MaxSize.Height - OriginalImage.Height;
+
+			if( (delta_width >= 0) && (delta_height >= 0) )
+			{
+				// Image is smaller than preview area.
+				rect_preview = Imaging.ArrangeContentRectangle( rect_preview_area, rect_image.Size, ContentAlignment.MiddleCenter );
+			}
+			else if( delta_width <= delta_height )
+			{
+				// Fit the width
+				rect_preview = new Rectangle(
+										0, 0
+										, MaxSize.Width
+										, (int)((double)OriginalImage.Height
+													* ((double)MaxSize.Width
+														/ (double)OriginalImage.Width))
+									);
+			}
+			else
+			{
+				// Fit the height
+				rect_preview = new Rectangle(
+										0, 0
+										, (int)((double)OriginalImage.Width 
+													* ((double)MaxSize.Height 
+														/ (double)OriginalImage.Height))
+										, MaxSize.Height
+									);
+			}
+			//rect_preview_draw = Imaging.ArrangeContentRectangle( rect_preview_area, rect_image.Size, ContentAlignment.MiddleCenter );
+			//Rectangle rect_preview_draw = GetImagePreviewRect( OriginalImage, PreviewSize_in );
+
+			// Create the preview image.
+			Image image_preview = new Bitmap( rect_preview.Width, rect_preview.Height, pixel_format );
+
+			// Create the preview graphics.
+			Graphics gfxPreview = Graphics.FromImage( image_preview );
+			gfxPreview.InterpolationMode = InterpolationMode.HighQualityBicubic;
+			gfxPreview.CompositingQuality = CompositingQuality.HighQuality;
+
+			gfxPreview.CompositingMode = CompositingMode.SourceCopy;
+			//gfxPreview.FillRectangle( new SolidBrush( Color.FromArgb( 255, 255, 255, 255 ) ), rect_preview_area );
+			//gfxPreview.FillRectangle(new SolidBrush(PreviewBackcolor_in), rectPreview);
+
+			// Render the image to the preview.
+			gfxPreview.DrawImage( OriginalImage, rect_preview, rect_image, GraphicsUnit.Pixel );
+
+			// Return, OK
+			gfxPreview.Dispose();
+			return image_preview;
 
 		}
 
@@ -170,7 +272,7 @@ namespace liquicode.AppTools
 		//-----------------------------------------------------
 		public static void DrawTranslucentImage( Graphics Graphics_in, Image Image_in, Rectangle Rectangle_in, float Opacity_in )
 		{
-			float[][] colormatrix_values =
+			float[][] matrix =
 			{
 				new float[] {		1,				0,				0,				0,				0			},
 				new float[] {		0,				1,				0,				0,				0			},
@@ -178,11 +280,48 @@ namespace liquicode.AppTools
 				new float[] {		0,				0,				0,				Opacity_in,		0			},
 				new float[] {		0,				0,				0,				0,				1			}
 			};
-			ColorMatrix colormatrix = new ColorMatrix( colormatrix_values );
+			ColorMatrix colormatrix = new ColorMatrix( matrix );
 			ImageAttributes attributes = new ImageAttributes();
 			attributes.SetColorMatrix( colormatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap );
 			Graphics_in.DrawImage( Image_in, Rectangle_in, 0, 0, Image_in.Width, Image_in.Height, GraphicsUnit.Pixel, attributes );
 			return;
+		}
+
+
+		//-----------------------------------------------------
+		public static Image AdjustBrightness( Image Image, int Value )
+		{
+			float FinalValue = (float)Value / 255.0f;
+			float[][] matrix = new float[][]
+			{
+                    new float[] {1, 0, 0, 0, 0},
+                    new float[] {0, 1, 0, 0, 0},
+                    new float[] {0, 0, 1, 0, 0},
+                    new float[] {0, 0, 0, 1, 0},
+                    new float[] {FinalValue, FinalValue, FinalValue, 1, 1}
+            };
+			return ApplyColorMatrix( matrix, Image );
+		}
+
+
+		//-----------------------------------------------------
+		public static Image ApplyColorMatrix( float[][] Matrix, Image OriginalImage )
+		{
+			Image new_image = new Bitmap( OriginalImage.Width, OriginalImage.Height );
+			using( Graphics NewGraphics = Graphics.FromImage( new_image ) )
+			{
+				ColorMatrix NewColorMatrix = new ColorMatrix( Matrix );
+				using( ImageAttributes Attributes = new ImageAttributes() )
+				{
+					Attributes.SetColorMatrix( NewColorMatrix );
+					NewGraphics.DrawImage( OriginalImage,
+						new System.Drawing.Rectangle( 0, 0, OriginalImage.Width, OriginalImage.Height ),
+						0, 0, OriginalImage.Width, OriginalImage.Height,
+						GraphicsUnit.Pixel,
+						Attributes );
+				}
+			}
+			return new_image;
 		}
 
 

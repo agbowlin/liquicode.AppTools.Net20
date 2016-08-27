@@ -102,23 +102,23 @@ namespace liquicode.AppTools
 			{
 				if( (Content.Width - Bounds.Width) >= (Content.Height - Bounds.Height) )
 				{
-					size.Height = Convert.ToInt32( Content.Height * (Bounds.Width / Content.Width) );
+					size.Height = Convert.ToInt32( (double)Content.Height * ((double)Bounds.Width / (double)Content.Width) );
 					size.Width = Bounds.Width;
 				}
 				else
 				{
-					size.Width = Convert.ToInt32( Content.Width * (Bounds.Height / Content.Height) );
+					size.Width = Convert.ToInt32( (double)Content.Width * ((double)Bounds.Height / (double)Content.Height) );
 					size.Height = Bounds.Height;
 				}
 			}
 			else if( Content.Width > Bounds.Width )
 			{
-				size.Height = Convert.ToInt32( Content.Height * (Bounds.Width / Content.Width) );
+				size.Height = Convert.ToInt32( (double)Content.Height * ((double)Bounds.Width / (double)Content.Width) );
 				size.Width = Bounds.Width;
 			}
 			else if( Content.Height > Bounds.Height )
 			{
-				size.Width = Convert.ToInt32( Content.Width * (Bounds.Height / Content.Height) );
+				size.Width = Convert.ToInt32( (double)Content.Width * ((double)Bounds.Height / (double)Content.Height) );
 				size.Height = Bounds.Height;
 			}
 			else
@@ -136,22 +136,22 @@ namespace liquicode.AppTools
 					break;
 				case ContentAlignment.TopCenter:
 					location.Y = Bounds.Top;
-					location.X = (Bounds.Left + Convert.ToInt32( (Bounds.Width / 2) - (size.Width / 2) ));
+					location.X = (Bounds.Left + Convert.ToInt32( ((double)Bounds.Width / 2) - ((double)size.Width / 2) ));
 					break;
 				case ContentAlignment.TopRight:
 					location.Y = Bounds.Top;
 					location.X = (Bounds.Right - size.Width);
 					break;
 				case ContentAlignment.MiddleLeft:
-					location.Y = (Bounds.Top + Convert.ToInt32( (Bounds.Height / 2) - (size.Height / 2) ));
+					location.Y = (Bounds.Top + Convert.ToInt32( ((double)Bounds.Height / 2) - ((double)size.Height / 2) ));
 					location.X = Bounds.Left;
 					break;
 				case ContentAlignment.MiddleCenter:
-					location.Y = (Bounds.Top + Convert.ToInt32( (Bounds.Height / 2) - (size.Height / 2) ));
-					location.X = (Bounds.Left + Convert.ToInt32( (Bounds.Width / 2) - (size.Width / 2) ));
+					location.Y = (Bounds.Top + Convert.ToInt32( ((double)Bounds.Height / 2) - ((double)size.Height / 2) ));
+					location.X = (Bounds.Left + Convert.ToInt32( ((double)Bounds.Width / 2) - ((double)size.Width / 2) ));
 					break;
 				case ContentAlignment.MiddleRight:
-					location.Y = (Bounds.Top + Convert.ToInt32( (Bounds.Height / 2) - (size.Height / 2) ));
+					location.Y = (Bounds.Top + Convert.ToInt32( ((double)Bounds.Height / 2) - ((double)size.Height / 2) ));
 					location.X = (Bounds.Right - size.Width);
 					break;
 				case ContentAlignment.BottomLeft:
@@ -160,7 +160,7 @@ namespace liquicode.AppTools
 					break;
 				case ContentAlignment.BottomCenter:
 					location.Y = (Bounds.Bottom - size.Height);
-					location.X = (Bounds.Left + Convert.ToInt32( (Bounds.Width / 2) - (size.Width / 2) ));
+					location.X = (Bounds.Left + Convert.ToInt32( ((double)Bounds.Width / 2) - ((double)size.Width / 2) ));
 					break;
 				case ContentAlignment.BottomRight:
 					location.Y = (Bounds.Bottom - size.Height);

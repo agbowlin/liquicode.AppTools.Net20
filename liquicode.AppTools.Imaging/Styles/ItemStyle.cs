@@ -93,7 +93,10 @@ namespace liquicode.AppTools
 
 				// Get the image rectangle.
 				if( this._ImageStyle == null )
-				{ layout.Image = new Rectangle( layout.Content.Location, new Size( 0, 0 ) ); }
+				{
+					layout.Image = new Rectangle( layout.Content.Location, new Size( 0, 0 ) );
+					//layout.Image = new Rectangle( layout.Content.Location, ImageSize );
+				}
 				else
 				{ layout.Image = ArrangeContentRectangle( layout.Text, ImageSize, this._ImageStyle.Alignment ); }
 
@@ -248,14 +251,15 @@ namespace liquicode.AppTools
 
 
 			//--------------------------------------------------------------------
-			public void DrawItem( Graphics Graphics, Image Image, string Text, ItemLayout Layout )
+			public ItemLayout DrawItem( Graphics Graphics, Image Image, string Text, ItemLayout Layout )
 			{
+				ItemLayout layout = Layout.Clone();
 
 				// Draw the border.
 				if( this._BorderStyle != null )
 				{
 					if( this._TextStyle == null ) { this._TextStyle = new TextStyle(); }
-					this._BorderStyle.Draw( Graphics, Layout.Bounds, this._TextStyle.BackColor );
+					layout.Content = this._BorderStyle.Draw( Graphics, Layout.Bounds, this._TextStyle.BackColor );
 				}
 
 				//// Erase the content background.
@@ -263,16 +267,18 @@ namespace liquicode.AppTools
 
 				// Draw the image.
 				if( (this._ImageStyle != null) && (Image != null) )
-				{ this._ImageStyle.Draw( Graphics, Layout.Image, Image ); }
+				{
+					layout.Image = this._ImageStyle.Draw( Graphics, Layout.Image, Image ); 
+				}
 
 				// Draw the text.
 				if( string.IsNullOrEmpty( Text ) != true )
 				{
 					if( this._TextStyle == null ) { this._TextStyle = new TextStyle(); }
-					this._TextStyle.Draw( Graphics, Text, Layout.Text, false );
+					layout.Text = this._TextStyle.Draw( Graphics, Text, Layout.Text, false );
 				}
 
-				return;
+				return layout;
 			}
 
 

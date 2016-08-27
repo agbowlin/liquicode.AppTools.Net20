@@ -437,7 +437,7 @@ namespace liquicode.AppTools
 
 
 			//-----------------------------------------------------
-			public void Draw( Graphics Graphics, Rectangle Bounds, Color ClientBackColor )
+			public Rectangle Draw( Graphics Graphics, Rectangle Bounds, Color ClientBackColor )
 			{
 				if( this.ImagingOptions != null ) { this.ImagingOptions.CopyTo( Graphics ); }
 				BorderRegions regions = this.GetBorderRegions( Bounds );
@@ -453,7 +453,11 @@ namespace liquicode.AppTools
 					Graphics.FillRegion( new SolidBrush( ClientBackColor ), regions.MiddleRegion );
 				}
 
-				return;
+				RectangleF rect_middleF = regions.MiddleRegion.GetBounds( Graphics );
+				Rectangle rect_middle = new Rectangle(
+												(int)rect_middleF.X, (int)rect_middleF.Y
+												, (int)rect_middleF.Width, (int)rect_middleF.Height );
+				return rect_middle;
 			}
 
 

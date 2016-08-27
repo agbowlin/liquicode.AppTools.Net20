@@ -95,7 +95,7 @@ namespace liquicode.AppTools
 
 
 			//-----------------------------------------------------
-			public void Draw( Graphics Graphics, string Text, Rectangle Rectangle, bool EraseBackground )
+			public Rectangle Draw( Graphics Graphics, string Text, Rectangle Rectangle, bool EraseBackground )
 			{
 				if( (this.ImagingOptions != null) )
 				{
@@ -151,7 +151,7 @@ namespace liquicode.AppTools
 				}
 
 				// Return
-				return;
+				return Rectangle;
 			}
 
 

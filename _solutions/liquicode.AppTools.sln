@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "liquicode.AppTools.FileSyst
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "liquicode.AppTools.Imaging", "..\liquicode.AppTools.Imaging\liquicode.AppTools.Imaging.csproj", "{E0C04E3B-4DBB-410C-8D77-D9178E301A61}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "liquicode.AppTools.Windowing", "..\liquicode.AppTools.Windowing\liquicode.AppTools.Windowing.csproj", "{EF2C69F3-AD00-45C9-86CB-A6A9170C153F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -67,6 +69,10 @@ Global
 		{E0C04E3B-4DBB-410C-8D77-D9178E301A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E0C04E3B-4DBB-410C-8D77-D9178E301A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E0C04E3B-4DBB-410C-8D77-D9178E301A61}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF2C69F3-AD00-45C9-86CB-A6A9170C153F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF2C69F3-AD00-45C9-86CB-A6A9170C153F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF2C69F3-AD00-45C9-86CB-A6A9170C153F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF2C69F3-AD00-45C9-86CB-A6A9170C153F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
