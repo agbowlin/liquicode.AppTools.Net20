@@ -3,5 +3,11 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
     <StartAction>Program</StartAction>
     <StartProgram>C:\work\liquicode.AppTools.Net20\_components\NUnit-2.5.10.11092 for .NET 2.0\NUnit-GUI\nunit-x86.exe</StartProgram>
+    <StartArguments>liquicode.AppTools._UnitTests.dll</StartArguments>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\work\liquicode.AppTools.Net20\_components\NUnit-2.5.10.11092 for .NET 2.0\NUnit-GUI\nunit-x86.exe</StartProgram>
+    <StartArguments>liquicode.AppTools._UnitTests.dll</StartArguments>
   </PropertyGroup>
 </Project>

@@ -17,6 +17,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "liquicode.AppTools.VisualCo
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "liquicode.AppTools._UnitTests", "..\liquicode.AppTools._UnitTests\liquicode.AppTools._UnitTests.csproj", "{A77827DF-9366-46C9-ACD6-E537E1AA95E9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "liquicode.AppTools.FileSystem", "..\liquicode.AppTools.FileSystem\liquicode.AppTools.FileSystem.csproj", "{365A672B-4098-4B88-81C4-094FFA27A024}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "liquicode.AppTools.Imaging", "..\liquicode.AppTools.Imaging\liquicode.AppTools.Imaging.csproj", "{E0C04E3B-4DBB-410C-8D77-D9178E301A61}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -55,6 +59,14 @@ Global
 		{A77827DF-9366-46C9-ACD6-E537E1AA95E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A77827DF-9366-46C9-ACD6-E537E1AA95E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A77827DF-9366-46C9-ACD6-E537E1AA95E9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{365A672B-4098-4B88-81C4-094FFA27A024}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365A672B-4098-4B88-81C4-094FFA27A024}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365A672B-4098-4B88-81C4-094FFA27A024}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365A672B-4098-4B88-81C4-094FFA27A024}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0C04E3B-4DBB-410C-8D77-D9178E301A61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0C04E3B-4DBB-410C-8D77-D9178E301A61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0C04E3B-4DBB-410C-8D77-D9178E301A61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0C04E3B-4DBB-410C-8D77-D9178E301A61}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -5,11 +5,11 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>9.0.30729</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{A77827DF-9366-46C9-ACD6-E537E1AA95E9}</ProjectGuid>
+    <ProjectGuid>{365A672B-4098-4B88-81C4-094FFA27A024}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>liquicode.AppTools</RootNamespace>
-    <AssemblyName>liquicode.AppTools._UnitTests</AssemblyName>
+    <AssemblyName>liquicode.AppTools.FileSystem</AssemblyName>
     <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <FileUpgradeFlags>
@@ -56,42 +56,28 @@
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="Ciphers\CiphersTests.cs" />
-    <Compile Include="Ciphers\WinDpapiTests.cs" />
-    <Compile Include="DataManagement\ObjectXmlSerializerTests.cs" />
-    <Compile Include="DataStructures\Generic\Matrix\TestMatrix.cs" />
-    <Compile Include="DataStructures\Generic\Matrix\TestMatrixDimension.cs" />
-    <Compile Include="DataStructures\Generic\Matrix\TestMatrixDimensionX.cs" />
-    <Compile Include="DataStructures\Generic\Matrix\TestMatrixDimensionY.cs" />
-    <Compile Include="DataStructures\Generic\Node\GenericNodeCountingVisitorTest.cs" />
-    <Compile Include="DataStructures\Generic\Node\GenericNodeDebugOutputNodeListenerTest.cs" />
-    <Compile Include="DataStructures\Generic\Node\GenericNodeTest.cs" />
-    <Compile Include="DataStructures\Generic\Node\TypedNodeTest.cs" />
-    <Compile Include="DataStructures\Generic\Node\SynchronizedStringNodeTest.cs" />
-    <Compile Include="DataStructures\Generic\Node\GenericNodeTestData.cs" />
-    <Compile Include="DataStructures\Generic\Vector\TestTypedVectors.cs" />
-    <Compile Include="DataStructures\Generic\Vector\TestVectorConversions.cs" />
-    <Compile Include="DataStructures\Node\NodeCountingVisitorTest.cs" />
-    <Compile Include="DataStructures\Node\NodeDebugOutputNodeListenerTest.cs" />
-    <Compile Include="DataStructures\Node\NodeTest.cs" />
-    <Compile Include="DataStructures\Node\NodeTestData.cs" />
-    <Compile Include="Dictionaries\SerializableDictionaryTests.cs" />
-    <Compile Include="FileSystem\BlockStreamTests01.cs" />
-    <Compile Include="FileSystem\FileSystemTests.cs" />
-    <Compile Include="FileSystem\PathnameTests.cs" />
-    <Compile Include="FileSystem\SimpleRandom.cs" />
-    <Compile Include="FileSystem\UnixShellOnPuttySsh.cs" />
-    <Compile Include="FileSystem\UnixShellOnWinScp.cs" />
-    <Compile Include="FileSystem\WindowsShellLocal.cs" />
-    <Compile Include="Sockets\SocketTests.cs" />
-    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
-    <Reference Include="nunit.framework">
-      <HintPath>..\_components\NUnit-2.5.10.11092 for .NET 2.0\nunit.framework.dll</HintPath>
-    </Reference>
-    <Reference Include="System" />
-    <Reference Include="System.XML" />
+    <Compile Include="FileSystemProviders\BlockStreamFileSystem.cs" />
+    <Compile Include="FileSystemProviders\FileSystemProvider.cs" />
+    <Compile Include="FileSystemProviders\LocalFileSystem.cs" />
+    <Compile Include="FileSystemProviders\UnixShell.cs" />
+    <Compile Include="FileSystem\BlockStream.cs" />
+    <Compile Include="FileSystem\Commands.cs" />
+    <Compile Include="FileSystem\Compare.cs" />
+    <Compile Include="FileSystem\Exceptions.cs" />
+    <Compile Include="FileSystem\FileSystemFields.cs" />
+    <Compile Include="FileSystem\FileSystemItem.cs" />
+    <Compile Include="FileSystem\FileSystemItemList.cs" />
+    <Compile Include="FileSystem\Pathname.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ShellAdapters\PuttySshShellAdapter.cs" />
+    <Compile Include="ShellAdapters\ShellAdapter.cs" />
+    <Compile Include="ShellAdapters\WinScpShellAdapter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="FileSystemDiagram.cd" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
@@ -109,28 +95,6 @@
       <ProductName>Windows Installer 3.1</ProductName>
       <Install>true</Install>
     </BootstrapperPackage>
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\liquicode.AppTools.Ciphers\liquicode.AppTools.Ciphers.csproj">
-      <Project>{1190B3A2-50FE-48F9-B01B-73AB06A41A75}</Project>
-      <Name>liquicode.AppTools.Ciphers</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\liquicode.AppTools.DataManagement\liquicode.AppTools.DataManagement.csproj">
-      <Project>{98ED449A-1F17-4ED9-8D20-E2BB812E17AD}</Project>
-      <Name>liquicode.AppTools.DataManagement</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\liquicode.AppTools.DataStructures\liquicode.AppTools.DataStructures.csproj">
-      <Project>{D183C9EB-3288-4614-8938-7ABA3471AD88}</Project>
-      <Name>liquicode.AppTools.DataStructures</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\liquicode.AppTools.Dictionaries\liquicode.AppTools.Dictionaries.csproj">
-      <Project>{B2A83E06-A1CC-4176-8D50-941A3F33F846}</Project>
-      <Name>liquicode.AppTools.Dictionaries</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\liquicode.AppTools.FileSystem\liquicode.AppTools.FileSystem.csproj">
-      <Project>{365A672B-4098-4B88-81C4-094FFA27A024}</Project>
-      <Name>liquicode.AppTools.FileSystem</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8" standalone="no"?>
+<!--This file represents the results of running a test suite-->
+<test-results name="C:\work\liquicode.AppTools.Net20\_release\liquicode.AppTools._UnitTests.dll" total="182" errors="0" failures="0" not-run="0" inconclusive="0" ignored="0" skipped="0" invalid="0" date="2016-08-27" time="03:12:47">
+  <environment nunit-version="2.5.10.11092" clr-version="2.0.50727.5420" os-version="Microsoft Windows NT 6.1.7601 Service Pack 1" platform="Win32NT" cwd="C:\work\liquicode.AppTools.Net20\_release" machine-name="DARKMATTER" user="AGBowlin" user-domain="DarkMatter" />
+  <culture-info current-culture="en-US" current-uiculture="en-US" />
+  <test-suite type="Assembly" name="C:\work\liquicode.AppTools.Net20\_release\liquicode.AppTools._UnitTests.dll" executed="True" result="Success" success="True" time="1.516" asserts="0">
+    <results>
+      <test-suite type="TestFixture" name="BlockStreamTests01" executed="True" result="Success" success="True" time="0.702" asserts="0">
+        <results>
+          <test-case name="BlockStreamTests01.T01_SimpleWriteRead" executed="True" result="Success" success="True" time="0.016" asserts="1" />
+          <test-case name="BlockStreamTests01.T11_SequentialWriteRead" executed="True" result="Success" success="True" time="0.034" asserts="300" />
+          <test-case name="BlockStreamTests01.T12_SequentialWriteRead" executed="True" result="Success" success="True" time="0.034" asserts="600" />
+          <test-case name="BlockStreamTests01.T21_RandomWriteRead" executed="True" result="Success" success="True" time="0.604" asserts="3732" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="CiphersTests" executed="True" result="Success" success="True" time="0.035" asserts="0">
+        <results>
+          <test-case name="CiphersTests.Test_001_Base64String" executed="True" result="Success" success="True" time="0.004" asserts="2" />
+          <test-case name="CiphersTests.Test_002_HashString" executed="True" result="Success" success="True" time="0.011" asserts="6" />
+          <test-case name="CiphersTests.Test_003_EncryptString" executed="True" result="Success" success="True" time="0.016" asserts="144" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="FileSystemTests" executed="True" result="Success" success="True" time="0.065" asserts="0">
+        <results>
+          <test-case name="FileSystemTests.T01_Settings" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="FileSystemTests.T11_ListFolders" executed="True" result="Success" success="True" time="0.006" asserts="0" />
+          <test-case name="FileSystemTests.T12_ListFolderItems" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+          <test-case name="FileSystemTests.T13_CreateFolder" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="FileSystemTests.T14_ReadFolder" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="FileSystemTests.T15_UpdateFolder" executed="True" result="Success" success="True" time="0.007" asserts="0" />
+          <test-case name="FileSystemTests.T16_DeleteFolder" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="FileSystemTests.T17_FolderCRUD" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+          <test-case name="FileSystemTests.T21_ListFiles" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="FileSystemTests.T22_ListFileItems" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+          <test-case name="FileSystemTests.T23_CreateFile" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="FileSystemTests.T24_ReadFile" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+          <test-case name="FileSystemTests.T25_UpdateFile" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+          <test-case name="FileSystemTests.T26_DeleteFile" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="FileSystemTests.T27_FileCRUD" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+          <test-case name="FileSystemTests.T31_Compare" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="GenericNodeCountingVisitorTest" executed="True" result="Success" success="True" time="0.013" asserts="0">
+        <results>
+          <test-case name="GenericNodeCountingVisitorTest.Test_10_CountingVisitorOnRoot" executed="True" result="Success" success="True" time="0.009" asserts="8" />
+          <test-case name="GenericNodeCountingVisitorTest.Test_11_CountingVisitorOnA1" executed="True" result="Success" success="True" time="0.001" asserts="8" />
+          <test-case name="GenericNodeCountingVisitorTest.Test_12_CountingVisitorOnC1" executed="True" result="Success" success="True" time="0.001" asserts="8" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="GenericNodeDebugOutputNodeListenerTest" executed="True" result="Success" success="True" time="0.002" asserts="0">
+        <results>
+          <test-case name="GenericNodeDebugOutputNodeListenerTest.Test_00_DebugOutput" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="GenericNodeTest" executed="True" result="Success" success="True" time="0.007" asserts="0">
+        <results>
+          <test-case name="GenericNodeTest.Test_00_TextGraph" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+          <test-case name="GenericNodeTest.Test_10_Navigation" executed="True" result="Success" success="True" time="0.003" asserts="14" />
+          <test-case name="GenericNodeTest.Test_20_Clone" executed="True" result="Success" success="True" time="0.001" asserts="14" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="NodeCountingVisitorTest" executed="True" result="Success" success="True" time="0.006" asserts="0">
+        <results>
+          <test-case name="NodeCountingVisitorTest.Test_10_CountingVisitorOnRoot" executed="True" result="Success" success="True" time="0.003" asserts="8" />
+          <test-case name="NodeCountingVisitorTest.Test_11_CountingVisitorOnA1" executed="True" result="Success" success="True" time="0.001" asserts="8" />
+          <test-case name="NodeCountingVisitorTest.Test_12_CountingVisitorOnC1" executed="True" result="Success" success="True" time="0.000" asserts="8" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="NodeDebugOutputNodeListenerTest" executed="True" result="Success" success="True" time="0.002" asserts="0">
+        <results>
+          <test-case name="NodeDebugOutputNodeListenerTest.Test_00_DebugOutput" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="NodeTest" executed="True" result="Success" success="True" time="0.004" asserts="0">
+        <results>
+          <test-case name="NodeTest.Test_00_TextGraph" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+          <test-case name="NodeTest.Test_10_Navigation" executed="True" result="Success" success="True" time="0.001" asserts="14" />
+          <test-case name="NodeTest.Test_20_Clone" executed="True" result="Success" success="True" time="0.000" asserts="14" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="ObjectXmlSerializerTests" executed="True" result="Success" success="True" time="0.199" asserts="0">
+        <results>
+          <test-case name="ObjectXmlSerializerTests.Test_010_SerializeSimpleType" executed="True" result="Success" success="True" time="0.197" asserts="1" />
+          <test-case name="ObjectXmlSerializerTests.Test_011_SerializeSimpleType_Derived" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="PathnameTests" executed="True" result="Success" success="True" time="0.006" asserts="0">
+        <results>
+          <test-case name="PathnameTests.Test_01_Parse_Path_Parent_Name" executed="True" result="Success" success="True" time="0.000" asserts="8" />
+          <test-case name="PathnameTests.Test_02_Constructors" executed="True" result="Success" success="True" time="0.001" asserts="13" />
+          <test-case name="PathnameTests.Test_11" executed="True" result="Success" success="True" time="0.000" asserts="17" />
+          <test-case name="PathnameTests.Test_12" executed="True" result="Success" success="True" time="0.000" asserts="4" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="SerializableDictionaryTests" executed="True" result="Success" success="True" time="0.087" asserts="0">
+        <results>
+          <test-case name="SerializableDictionaryTests.Test_010_StringDictionary" executed="True" result="Success" success="True" time="0.087" asserts="3" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="SocketTests" executed="True" result="Success" success="True" time="0.001" asserts="0">
+        <results>
+          <test-case name="SocketTests.Test_010_EchoClient" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="SynchronizedStringNodeTest" executed="True" result="Success" success="True" time="0.012" asserts="0">
+        <results>
+          <test-case name="SynchronizedStringNodeTest.Test_20_Copy" executed="True" result="Success" success="True" time="0.003" asserts="28" />
+          <test-case name="SynchronizedStringNodeTest.Test_21_Synchronize" executed="True" result="Success" success="True" time="0.002" asserts="28" />
+          <test-case name="SynchronizedStringNodeTest.Test_22_TripleSynchronize" executed="True" result="Success" success="True" time="0.001" asserts="56" />
+          <test-case name="SynchronizedStringNodeTest.Test_23_JumbledTripleSynchronize" executed="True" result="Success" success="True" time="0.002" asserts="56" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Test_byteVector" executed="True" result="Success" success="True" time="0.028" asserts="0">
+        <results>
+          <test-case name="Test_byteVector.Test_Vector`2.Test_00_DefaultConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_01_DisallowUnintentionalDeepCopyConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_02_TestVector" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_10_FillLength" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_11_FillAll" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_12_Substitute" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_20_ExplicitArrayCast" executed="True" result="Success" success="True" time="0.002" asserts="1002" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_21_ImplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_30_Equality" executed="True" result="Success" success="True" time="0.002" asserts="3" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_31_Inequality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_40_SerializeByteArray" executed="True" result="Success" success="True" time="0.003" asserts="1001" />
+          <test-case name="Test_byteVector.Test_Vector`2.Test_41_SerializeStream" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Test_DateTimeVector" executed="True" result="Success" success="True" time="0.025" asserts="0">
+        <results>
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_00_DefaultConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_01_DisallowUnintentionalDeepCopyConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_02_TestVector" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_10_FillLength" executed="True" result="Success" success="True" time="0.000" asserts="1000" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_11_FillAll" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_12_Substitute" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_20_ExplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_21_ImplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_30_Equality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_31_Inequality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_40_SerializeByteArray" executed="True" result="Success" success="True" time="0.002" asserts="1001" />
+          <test-case name="Test_DateTimeVector.Test_Vector`2.Test_41_SerializeStream" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Test_doubleVector" executed="True" result="Success" success="True" time="0.023" asserts="0">
+        <results>
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_00_DefaultConstructor" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_01_DisallowUnintentionalDeepCopyConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_02_TestVector" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_10_FillLength" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_11_FillAll" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_12_Substitute" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_20_ExplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_21_ImplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_30_Equality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_31_Inequality" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_40_SerializeByteArray" executed="True" result="Success" success="True" time="0.002" asserts="1001" />
+          <test-case name="Test_doubleVector.Test_Vector`2.Test_41_SerializeStream" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Test_floatVector" executed="True" result="Success" success="True" time="0.023" asserts="0">
+        <results>
+          <test-case name="Test_floatVector.Test_Vector`2.Test_00_DefaultConstructor" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_01_DisallowUnintentionalDeepCopyConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_02_TestVector" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_10_FillLength" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_11_FillAll" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_12_Substitute" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_20_ExplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_21_ImplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_30_Equality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_31_Inequality" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_40_SerializeByteArray" executed="True" result="Success" success="True" time="0.002" asserts="1001" />
+          <test-case name="Test_floatVector.Test_Vector`2.Test_41_SerializeStream" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Test_intVector" executed="True" result="Success" success="True" time="0.024" asserts="0">
+        <results>
+          <test-case name="Test_intVector.Test_Vector`2.Test_00_DefaultConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_01_DisallowUnintentionalDeepCopyConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_02_TestVector" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_10_FillLength" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_11_FillAll" executed="True" result="Success" success="True" time="0.000" asserts="1000" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_12_Substitute" executed="True" result="Success" success="True" time="0.002" asserts="1000" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_20_ExplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_21_ImplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_30_Equality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_31_Inequality" executed="True" result="Success" success="True" time="0.000" asserts="3" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_40_SerializeByteArray" executed="True" result="Success" success="True" time="0.002" asserts="1001" />
+          <test-case name="Test_intVector.Test_Vector`2.Test_41_SerializeStream" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Test_longVector" executed="True" result="Success" success="True" time="0.023" asserts="0">
+        <results>
+          <test-case name="Test_longVector.Test_Vector`2.Test_00_DefaultConstructor" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_01_DisallowUnintentionalDeepCopyConstructor" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_02_TestVector" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_10_FillLength" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_11_FillAll" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_12_Substitute" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_20_ExplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_21_ImplicitArrayCast" executed="True" result="Success" success="True" time="0.000" asserts="1002" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_30_Equality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_31_Inequality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_40_SerializeByteArray" executed="True" result="Success" success="True" time="0.002" asserts="1001" />
+          <test-case name="Test_longVector.Test_Vector`2.Test_41_SerializeStream" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="Test_stringVector" executed="True" result="Success" success="True" time="0.025" asserts="0">
+        <results>
+          <test-case name="Test_stringVector.Test_Vector`2.Test_00_DefaultConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_01_DisallowUnintentionalDeepCopyConstructor" executed="True" result="Success" success="True" time="0.001" asserts="1" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_02_TestVector" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_10_FillLength" executed="True" result="Success" success="True" time="0.000" asserts="1000" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_11_FillAll" executed="True" result="Success" success="True" time="0.001" asserts="1000" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_12_Substitute" executed="True" result="Success" success="True" time="0.000" asserts="1000" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_20_ExplicitArrayCast" executed="True" result="Success" success="True" time="0.002" asserts="1002" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_21_ImplicitArrayCast" executed="True" result="Success" success="True" time="0.001" asserts="1002" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_30_Equality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_31_Inequality" executed="True" result="Success" success="True" time="0.001" asserts="3" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_40_SerializeByteArray" executed="True" result="Success" success="True" time="0.003" asserts="1001" />
+          <test-case name="Test_stringVector.Test_Vector`2.Test_41_SerializeStream" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="TestMatrix" executed="True" result="Success" success="True" time="0.008" asserts="0">
+        <results>
+          <test-case name="TestMatrix.Test_10_Values" executed="True" result="Success" success="True" time="0.006" asserts="12" />
+          <test-case name="TestMatrix.Test_20_Bounds" executed="True" result="Success" success="True" time="0.000" asserts="42" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="TestMatrixDimensionX" executed="True" result="Success" success="True" time="0.019" asserts="0">
+        <results>
+          <test-case name="TestMatrixDimensionX.Test_11_Swap_Forward" executed="True" result="Success" success="True" time="0.002" asserts="100" />
+          <test-case name="TestMatrixDimensionX.Test_12_Swap_Backward" executed="True" result="Success" success="True" time="0.001" asserts="100" />
+          <test-case name="TestMatrixDimensionX.Test_21_Copy_Forward" executed="True" result="Success" success="True" time="0.001" asserts="100" />
+          <test-case name="TestMatrixDimensionX.Test_22_Copy_Backward" executed="True" result="Success" success="True" time="0.000" asserts="100" />
+          <test-case name="TestMatrixDimensionX.Test_31_Move_Forward" executed="True" result="Success" success="True" time="0.002" asserts="100" />
+          <test-case name="TestMatrixDimensionX.Test_32_Move_Backward" executed="True" result="Success" success="True" time="0.000" asserts="100" />
+          <test-case name="TestMatrixDimensionX.Test_41_AppendDelete" executed="True" result="Success" success="True" time="0.001" asserts="100" />
+          <test-case name="TestMatrixDimensionX.Test_51_InsertDelete" executed="True" result="Success" success="True" time="0.002" asserts="400" />
+          <test-case name="TestMatrixDimensionX.Test_52_InsertMoveDelete" executed="True" result="Success" success="True" time="0.001" asserts="100" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="TestMatrixDimensionY" executed="True" result="Success" success="True" time="0.015" asserts="0">
+        <results>
+          <test-case name="TestMatrixDimensionY.Test_11_Swap_Forward" executed="True" result="Success" success="True" time="0.002" asserts="100" />
+          <test-case name="TestMatrixDimensionY.Test_12_Swap_Backward" executed="True" result="Success" success="True" time="0.001" asserts="100" />
+          <test-case name="TestMatrixDimensionY.Test_21_Copy_Forward" executed="True" result="Success" success="True" time="0.000" asserts="100" />
+          <test-case name="TestMatrixDimensionY.Test_22_Copy_Backward" executed="True" result="Success" success="True" time="0.000" asserts="100" />
+          <test-case name="TestMatrixDimensionY.Test_31_Move_Forward" executed="True" result="Success" success="True" time="0.000" asserts="100" />
+          <test-case name="TestMatrixDimensionY.Test_32_Move_Backward" executed="True" result="Success" success="True" time="0.001" asserts="100" />
+          <test-case name="TestMatrixDimensionY.Test_41_AppendDelete" executed="True" result="Success" success="True" time="0.001" asserts="100" />
+          <test-case name="TestMatrixDimensionY.Test_51_InsertDelete" executed="True" result="Success" success="True" time="0.000" asserts="400" />
+          <test-case name="TestMatrixDimensionY.Test_52_InsertMoveDelete" executed="True" result="Success" success="True" time="0.001" asserts="100" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="TestVectorConversions" executed="True" result="Success" success="True" time="0.019" asserts="0">
+        <results>
+          <test-case name="TestVectorConversions.Test_00_DefaultConstructor" executed="True" result="Success" success="True" time="0.000" asserts="1" />
+          <test-case name="TestVectorConversions.Test_01_ConstructorFromObject" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="TestVectorConversions.Test_02_ConstructorFromArray" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="TestVectorConversions.Test_03_ConstructorFromByteArray" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="TestVectorConversions.Test_04_ConstructorFromStream" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="TestVectorConversions.Test_11_FromObject" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="TestVectorConversions.Test_12_FromArray" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="TestVectorConversions.Test_13_FromByteArray" executed="True" result="Success" success="True" time="0.001" asserts="1001" />
+          <test-case name="TestVectorConversions.Test_14_FromStream" executed="True" result="Success" success="True" time="0.000" asserts="1001" />
+          <test-case name="TestVectorConversions.Test_20_Clone" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="TypedNodeTest" executed="True" result="Success" success="True" time="0.002" asserts="0">
+        <results>
+          <test-case name="TypedNodeTest.Test_00_TextGraph" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+          <test-case name="TypedNodeTest.Test_10_Navigation" executed="True" result="Success" success="True" time="0.000" asserts="14" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="WindowsShellLocal" executed="True" result="Success" success="True" time="0.073" asserts="0">
+        <results>
+          <test-case name="WindowsShellLocal.FileSystemTests.T01_Settings" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T11_ListFolders" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T12_ListFolderItems" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T13_CreateFolder" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T14_ReadFolder" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T15_UpdateFolder" executed="True" result="Success" success="True" time="0.004" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T16_DeleteFolder" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T17_FolderCRUD" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T21_ListFiles" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T22_ListFileItems" executed="True" result="Success" success="True" time="0.003" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T23_CreateFile" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T24_ReadFile" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T25_UpdateFile" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T26_DeleteFile" executed="True" result="Success" success="True" time="0.000" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T27_FileCRUD" executed="True" result="Success" success="True" time="0.001" asserts="0" />
+          <test-case name="WindowsShellLocal.FileSystemTests.T31_Compare" executed="True" result="Success" success="True" time="0.002" asserts="0" />
+        </results>
+      </test-suite>
+      <test-suite type="TestFixture" name="WinDpapiTests" executed="True" result="Success" success="True" time="0.007" asserts="0">
+        <results>
+          <test-case name="WinDpapiTests.Test_001_ProtectString" executed="True" result="Success" success="True" time="0.006" asserts="12" />
+        </results>
+      </test-suite>
+    </results>
+  </test-suite>
+</test-results>
