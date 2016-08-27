@@ -1,2 +1,11 @@
-_debug
+_debug/*
+_release/*
 /_solutions/*.suo
+/liquicode.AppTools._UnitTests/obj
+/liquicode.AppTools.Ciphers/obj
+/liquicode.AppTools.DataManagement/obj
+/liquicode.AppTools.DataStructures/obj
+/liquicode.AppTools.Dictionaries/obj
+/liquicode.AppTools.Parsing/obj
+/liquicode.AppTools.Sockets/obj
+/liquicode.AppTools.VisualComponents/obj
