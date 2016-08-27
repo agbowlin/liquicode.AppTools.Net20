@@ -1,5 +1,4 @@
 _debug
-_release
 /_solutions/*.suo
 /liquicode.AppTools._UnitTests/obj
 /liquicode.AppTools.Ciphers/obj
