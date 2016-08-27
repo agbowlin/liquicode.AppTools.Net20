@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|AnyCPU'">
+    <StartAction>Program</StartAction>
+    <StartProgram>C:\work\liquicode.AppTools.Net20\_components\NUnit-2.5.10.11092 for .NET 2.0\NUnit-GUI\nunit-x86.exe</StartProgram>
+  </PropertyGroup>
+</Project>
