@@ -113,6 +113,13 @@ namespace liquicode.AppTools
 
 
 		//=====================================================================
+		public string GetOptionString( string OptionName )
+		{
+			return (string)this.GetOption( OptionName );
+		}
+
+
+		//=====================================================================
 		public void SetOption_WindowCoordinates( string WindowName, Form Window )
 		{
 			this.FindOrCreateOption( WindowName + ".Window.Location.X" ).OptionValue = Window.Location.X;
