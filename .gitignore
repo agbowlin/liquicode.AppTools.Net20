@@ -4,6 +4,7 @@ _debug
 /_solutions/*.suo
 
 /liquicode.AppTools._UnitTests/obj
+/liquicode.AppTools._FormTests/obj
 /liquicode.AppTools.Ciphers/obj
 /liquicode.AppTools.DataManagement/obj
 /liquicode.AppTools.DataStructures/obj
