@@ -62,9 +62,9 @@
     <Reference Include="System.XML" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Primitives\GfxImages.cs" />
     <Compile Include="Primitives\GraphicsHdc.cs" />
     <Compile Include="Styles\BorderStyle.cs" />
-    <Compile Include="Primitives\GfxImaging.cs" />
     <Compile Include="Primitives\GfxShapes.cs" />
     <Compile Include="Primitives\GfxText.cs" />
     <Compile Include="Styles\ImageStyle.cs" />

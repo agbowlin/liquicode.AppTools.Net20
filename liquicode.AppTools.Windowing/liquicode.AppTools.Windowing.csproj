@@ -44,6 +44,9 @@
   <ItemGroup>
     <Compile Include="ApplicationBusy.cs" />
     <Compile Include="ApplicationOptions.cs" />
+    <Compile Include="DockingControl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="FormsApplication.cs" />
     <Compile Include="MessageWindow.cs">
       <SubType>Form</SubType>
