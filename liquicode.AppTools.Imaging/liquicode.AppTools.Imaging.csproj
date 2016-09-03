@@ -67,6 +67,7 @@
     <Compile Include="Styles\BorderStyle.cs" />
     <Compile Include="Primitives\GfxShapes.cs" />
     <Compile Include="Primitives\GfxText.cs" />
+    <Compile Include="Styles\ImageTransform.cs" />
     <Compile Include="Styles\ImageStyle.cs" />
     <Compile Include="Styles\ImagingOptions.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

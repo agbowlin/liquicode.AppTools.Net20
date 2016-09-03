@@ -125,5 +125,32 @@ namespace liquicode.AppTools
 		}
 
 
+		//-----------------------------------------------------
+		public static ImagingOptions ImagingOptionsDefault()
+		{
+			ImagingOptions options = new ImagingOptions();
+			options.SelectDefault();
+			return options;
+		}
+
+
+		//-----------------------------------------------------
+		public static ImagingOptions ImagingOptionsHighSpeed()
+		{
+			ImagingOptions options = new ImagingOptions();
+			options.SelectHighSpeed();
+			return options;
+		}
+
+
+		//-----------------------------------------------------
+		public static ImagingOptions ImagingOptionsHighQuality()
+		{
+			ImagingOptions options = new ImagingOptions();
+			options.SelectHighQuality();
+			return options;
+		}
+
+
 	}
 }

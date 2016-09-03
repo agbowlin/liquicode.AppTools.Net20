@@ -14,7 +14,7 @@ namespace liquicode.AppTools._FormTests
 		{
 			Application.EnableVisualStyles();
 			Application.SetCompatibleTextRenderingDefault( false );
-			Application.Run( new Form1() );
+			Application.Run( new TransformImage_Test() );
 		}
 	}
 }

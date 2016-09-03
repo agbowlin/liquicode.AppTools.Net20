@@ -238,8 +238,8 @@ namespace liquicode.AppTools
 				// Fit the height
 				rect_preview = new Rectangle(
 										0, 0
-										, (int)((double)OriginalImage.Width 
-													* ((double)MaxSize.Height 
+										, (int)((double)OriginalImage.Width
+													* ((double)MaxSize.Height
 														/ (double)OriginalImage.Height))
 										, MaxSize.Height
 									);
@@ -270,35 +270,60 @@ namespace liquicode.AppTools
 
 
 		//-----------------------------------------------------
-		public static void DrawTranslucentImage( Graphics Graphics_in, Image Image_in, Rectangle Rectangle_in, float Opacity_in )
+		public static void DrawTranslucentImage( Graphics Graphics_in, Image Image_in, Rectangle Rectangle_in, float Opacity )
 		{
 			float[][] matrix =
 			{
-				new float[] {		1,				0,				0,				0,				0			},
-				new float[] {		0,				1,				0,				0,				0			},
-				new float[] {		0,				0,				1,				0,				0			},
-				new float[] {		0,				0,				0,				Opacity_in,		0			},
-				new float[] {		0,				0,				0,				0,				1			}
+				new float[] {	1,	0,	0,	0,			0	},
+				new float[] {	0,	1,	0,	0,			0	},
+				new float[] {	0,	0,	1,	0,			0	},
+				new float[] {	0,	0,	0,	Opacity,	0	},
+				new float[] {	0,	0,	0,	0,			1	}
 			};
-			ColorMatrix colormatrix = new ColorMatrix( matrix );
+			ColorMatrix color_matrix = new ColorMatrix( matrix );
 			ImageAttributes attributes = new ImageAttributes();
-			attributes.SetColorMatrix( colormatrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap );
+			attributes.SetColorMatrix( color_matrix, ColorMatrixFlag.Default, ColorAdjustType.Bitmap );
 			Graphics_in.DrawImage( Image_in, Rectangle_in, 0, 0, Image_in.Width, Image_in.Height, GraphicsUnit.Pixel, attributes );
 			return;
 		}
 
 
 		//-----------------------------------------------------
-		public static Image AdjustBrightness( Image Image, int Value )
+		public static void DrawTranslucentImage( Image BackgroundImage, Image TranslucentImage, Rectangle TranslucentRectangle, float Opacity )
 		{
-			float FinalValue = (float)Value / 255.0f;
+			using( Graphics graphics = Graphics.FromImage( BackgroundImage ) )
+			{
+				Imaging.DrawTranslucentImage( graphics, TranslucentImage, TranslucentRectangle, Opacity );
+			}
+			return;
+		}
+
+
+		////-----------------------------------------------------
+		//public static Image ApplyOpacity( Image Image, float Value )
+		//{
+		//    float[][] matrix = new float[][]
+		//    {
+		//        new float[] {	1,	0,	0,	0,		0	},
+		//        new float[] {	0,	1,	0,	0,		0	},
+		//        new float[] {	0,	0,	1,	0,		0	},
+		//        new float[] {	0,	0,	0,	Value,	0	},
+		//        new float[] {	0,	0,	0,	0,		1	}
+		//    };
+		//    return ApplyColorMatrix( matrix, Image );
+		//}
+
+
+		//-----------------------------------------------------
+		public static Image ApplyBrightness( Image Image, float Value )
+		{
 			float[][] matrix = new float[][]
 			{
-                    new float[] {1, 0, 0, 0, 0},
-                    new float[] {0, 1, 0, 0, 0},
-                    new float[] {0, 0, 1, 0, 0},
-                    new float[] {0, 0, 0, 1, 0},
-                    new float[] {FinalValue, FinalValue, FinalValue, 1, 1}
+                new float[] {1, 0, 0, 0, 0},
+                new float[] {0, 1, 0, 0, 0},
+                new float[] {0, 0, 1, 0, 0},
+                new float[] {0, 0, 0, 1, 0},
+                new float[] {Value, Value, Value, 1, 1}
             };
 			return ApplyColorMatrix( matrix, Image );
 		}
@@ -308,38 +333,38 @@ namespace liquicode.AppTools
 		public static Image ApplyColorMatrix( float[][] Matrix, Image OriginalImage )
 		{
 			Image new_image = new Bitmap( OriginalImage.Width, OriginalImage.Height );
-			using( Graphics NewGraphics = Graphics.FromImage( new_image ) )
+			using( Graphics graphics = Graphics.FromImage( new_image ) )
 			{
-				ColorMatrix NewColorMatrix = new ColorMatrix( Matrix );
-				using( ImageAttributes Attributes = new ImageAttributes() )
+				ColorMatrix color_matrix = new ColorMatrix( Matrix );
+				using( ImageAttributes attributes = new ImageAttributes() )
 				{
-					Attributes.SetColorMatrix( NewColorMatrix );
-					NewGraphics.DrawImage( OriginalImage,
-						new System.Drawing.Rectangle( 0, 0, OriginalImage.Width, OriginalImage.Height ),
-						0, 0, OriginalImage.Width, OriginalImage.Height,
-						GraphicsUnit.Pixel,
-						Attributes );
+					attributes.SetColorMatrix( color_matrix );
+					Rectangle rect_image = new Rectangle( 0, 0, OriginalImage.Width, OriginalImage.Height );
+					graphics.DrawImage(
+						OriginalImage, rect_image
+						, 0, 0, rect_image.Width, rect_image.Height
+						, GraphicsUnit.Pixel, attributes );
 				}
 			}
 			return new_image;
 		}
 
 
-		//-----------------------------------------------------
-		public static Image FadeImage( Image Image_in, Color BackColor_in, float Angle_in )
-		{
-			Image image = new Bitmap( Image_in.Width, Image_in.Height );
-			// Draw the source image.
-			Graphics gfx = Graphics.FromImage( image );
-			gfx.DrawImage( Image_in, 0, 0 );
-			// Apply a transparent gradient.
-			Rectangle rc = new Rectangle( 0, -1, image.Width, image.Height );
-			LinearGradientBrush br = new LinearGradientBrush( rc, Color.Transparent, BackColor_in, Angle_in, false );
-			gfx.FillRectangle( Brushes.Brown, rc );
-			// Cleanup and return.
-			gfx.Dispose();
-			return image;
-		}
+		////-----------------------------------------------------
+		//public static Image FadeImage( Image Image_in, Color BackColor_in, float Angle_in )
+		//{
+		//    Image image = new Bitmap( Image_in.Width, Image_in.Height );
+		//    // Draw the source image.
+		//    Graphics gfx = Graphics.FromImage( image );
+		//    gfx.DrawImage( Image_in, 0, 0 );
+		//    // Apply a transparent gradient.
+		//    Rectangle rc = new Rectangle( 0, -1, image.Width, image.Height );
+		//    LinearGradientBrush br = new LinearGradientBrush( rc, Color.Transparent, BackColor_in, Angle_in, false );
+		//    gfx.FillRectangle( br, rc );
+		//    // Cleanup and return.
+		//    gfx.Dispose();
+		//    return image;
+		//}
 
 
 		//  '-----------------------------------------------------

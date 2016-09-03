@@ -43,14 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="TransformImage_Test.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="TransformImage_Test.Designer.cs">
+      <DependentUpon>TransformImage_Test.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="TransformImage_Test.resx">
+      <DependentUpon>TransformImage_Test.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -71,6 +74,10 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\liquicode.AppTools.Imaging\liquicode.AppTools.Imaging.csproj">
+      <Project>{E0C04E3B-4DBB-410C-8D77-D9178E301A61}</Project>
+      <Name>liquicode.AppTools.Imaging</Name>
+    </ProjectReference>
     <ProjectReference Include="..\liquicode.AppTools.Windowing\liquicode.AppTools.Windowing.csproj">
       <Project>{EF2C69F3-AD00-45C9-86CB-A6A9170C153F}</Project>
       <Name>liquicode.AppTools.Windowing</Name>
