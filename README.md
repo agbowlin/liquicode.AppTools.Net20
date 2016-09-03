@@ -11,11 +11,11 @@ single static class (e.g. `Imaging`), some expose a number of creatable
 classes, and others expose a combination of static and dynamically creatable
 classes. 
 
-All of these projects are straight up .NET 2.0 compatible and have no 3rd
-party dependencies.
-My intention for setting this restriction is to make the code as portable as
+All of these projects are straight up .NET 2.0 compatible, are compiled for
+the x86 (32-bit) platform, and have no 3rd party dependencies.
+My intention for setting these restrictions is to make the code as portable as
 possible.
-Also, the wrapping of 3rd party libraries is the focus of another project:
+Also, the wrapping up of 3rd party libraries is the focus of another project:
 [liquicode.LibWraps.Net](https://github.com/agbowlin/liquicode.LibWraps.Net)
 
 Note that the following classes access a Windows system dll and, therefore,
