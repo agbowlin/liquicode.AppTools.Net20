@@ -1,19 +1,44 @@
 
 _debug
 
+_docs/Help/*.log
+
 /_solutions/*.suo
 
+/liquicode.AppTools._UnitTests/bin
 /liquicode.AppTools._UnitTests/obj
+
+/liquicode.AppTools._FormTests/bin
 /liquicode.AppTools._FormTests/obj
+
+/liquicode.AppTools.Ciphers/bin
 /liquicode.AppTools.Ciphers/obj
+
+/liquicode.AppTools.DataManagement/bin
 /liquicode.AppTools.DataManagement/obj
+
+/liquicode.AppTools.DataStructures/bin
 /liquicode.AppTools.DataStructures/obj
+
+/liquicode.AppTools.Dictionaries/bin
 /liquicode.AppTools.Dictionaries/obj
+
+/liquicode.AppTools.FileSystem/bin
 /liquicode.AppTools.FileSystem/obj
+
+/liquicode.AppTools.Imaging/bin
 /liquicode.AppTools.Imaging/obj
+
+/liquicode.AppTools.Parsing/bin
 /liquicode.AppTools.Parsing/obj
+
+/liquicode.AppTools.Sockets/bin
 /liquicode.AppTools.Sockets/obj
+
+/liquicode.AppTools.VisualComponents/bin
 /liquicode.AppTools.VisualComponents/obj
+
+/liquicode.AppTools.Windowing/bin
 /liquicode.AppTools.Windowing/obj
 
 /_release/nunit.framework.xml

@@ -70,15 +70,15 @@ namespace liquicode.AppTools
 					this.ImagingOptions.CopyTo( Graphics );
 				}
 
-				// Erase background.
-
 				// Get font and colors.
 				Font font = (this.Font != null ? this.Font : TextStyle.DefaultFont);
 				Color backcolor = (!this.BackColor.Equals( Color.Empty ) ? this.BackColor : Color.White);
 				Color forecolor = (!this.ForeColor.Equals( Color.Empty ) ? this.ForeColor : Color.Black);
 
-				// Draw text.
+				// Erase background.
 				if( EraseBackground ) { Graphics.FillRectangle( new SolidBrush( backcolor ), Rectangle ); }
+
+				// Draw text.
 				Graphics.DrawString( Text, font, new SolidBrush( forecolor ), Rectangle, this.StringFormat );
 
 				// Return

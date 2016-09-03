@@ -43,8 +43,7 @@
     <PlatformTarget>x86</PlatformTarget>
     <UseVSHostingProcess>false</UseVSHostingProcess>
     <RegisterForComInterop>false</RegisterForComInterop>
-    <DocumentationFile>
-    </DocumentationFile>
+    <DocumentationFile>..\_debug\liquicode.AppTools.DataStructures.XML</DocumentationFile>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
