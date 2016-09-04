@@ -446,25 +446,44 @@ namespace liquicode.AppTools
 		}
 
 
+		////-------------------------------------------------
+		//public List<Guid> BlockIDs
+		//{
+		//    get
+		//    {
+		//        if( (this._Stream == null) )
+		//            return null;
+		//        if( (this._Blocks == null) )
+		//            return null;
+		//        List<Guid> list = new List<Guid>();
+		//        int ndx;
+		//        StreamControlBlock BLK;
+		//        for( ndx = 1; ndx <= this._Blocks.Count; ndx++ )
+		//        {
+		//            BLK = (StreamControlBlock)this._Blocks[ ndx - 1 ];
+		//            list.Add( BLK.ID );
+		//        }
+		//        return list;
+		//    }
+		//}
+
+
 		//-------------------------------------------------
-		public List<Guid> BlockIDs
+		public List<Guid> GetBlockIDs()
 		{
-			get
+			if( (this._Stream == null) )
+				return null;
+			if( (this._Blocks == null) )
+				return null;
+			List<Guid> list = new List<Guid>();
+			int ndx;
+			StreamControlBlock BLK;
+			for( ndx = 1; ndx <= this._Blocks.Count; ndx++ )
 			{
-				if( (this._Stream == null) )
-					return null;
-				if( (this._Blocks == null) )
-					return null;
-				List<Guid> list = new List<Guid>();
-				int ndx;
-				StreamControlBlock BLK;
-				for( ndx = 1; ndx <= this._Blocks.Count; ndx++ )
-				{
-					BLK = (StreamControlBlock)this._Blocks[ ndx - 1 ];
-					list.Add( BLK.ID );
-				}
-				return list;
+				BLK = (StreamControlBlock)this._Blocks[ ndx - 1 ];
+				list.Add( BLK.ID );
 			}
+			return list;
 		}
 
 

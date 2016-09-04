@@ -59,7 +59,7 @@ public class BlockStreamTests01
 	//---------------------------------------------------------------------
 	private void AssertIsValid( BlockStream Blocks )
 	{
-		foreach( Guid id in Blocks.BlockIDs )
+		foreach( Guid id in Blocks.GetBlockIDs() )
 		{
 			if( !(id.Equals( Guid.Empty )) )
 			{
@@ -164,7 +164,7 @@ public class BlockStreamTests01
 			}
 			else
 			{
-				List<Guid> ids = blocks.BlockIDs;
+				List<Guid> ids = blocks.GetBlockIDs();
 				int ndx = random.RandomInteger( 1, ids.Count );
 				Guid id = ids[ ndx - 1 ];
 				if( action < 75 ) // Update

@@ -397,13 +397,13 @@ namespace liquicode.AppTools
 		{
 			FileSystemItem entry = new FileSystemItem();
 			entry.Exists = true;
-			entry.IsFolder = (bool)Tags["IsFolder"];
+			entry.IsFolder = (bool)Tags[ "IsFolder" ];
 			entry.Path = "";
-			entry.Name = (string)Tags["Name"];
-			entry.DateCreated = (DateTime?)Tags["DateCreated"];
-			entry.DateLastWrite = (DateTime?)Tags["DateLastWrite"];
-			entry.DateLastRead = (DateTime?)Tags["DateLastRead"];
-			entry.Size = (long?)Tags["Size"];
+			entry.Name = (string)Tags[ "Name" ];
+			entry.DateCreated = (DateTime?)Tags[ "DateCreated" ];
+			entry.DateLastWrite = (DateTime?)Tags[ "DateLastWrite" ];
+			entry.DateLastRead = (DateTime?)Tags[ "DateLastRead" ];
+			entry.Size = (long?)Tags[ "Size" ];
 			return entry;
 		}
 
@@ -411,13 +411,13 @@ namespace liquicode.AppTools
 		private Hashtable Item2Tags( FileSystemItem Item, Guid ParentID )
 		{
 			Hashtable tags = new Hashtable();
-			tags["IsFolder"] = Item.IsFolder;
-			tags["ParentID"] = ParentID;
-			tags["Name"] = Item.Name;
-			tags["DateCreated"] = Item.DateCreated;
-			tags["DateLastWrite"] = Item.DateLastWrite;
-			tags["DateLastRead"] = Item.DateLastRead;
-			tags["Size"] = Item.Size;
+			tags[ "IsFolder" ] = Item.IsFolder;
+			tags[ "ParentID" ] = ParentID;
+			tags[ "Name" ] = Item.Name;
+			tags[ "DateCreated" ] = Item.DateCreated;
+			tags[ "DateLastWrite" ] = Item.DateLastWrite;
+			tags[ "DateLastRead" ] = Item.DateLastRead;
+			tags[ "Size" ] = Item.Size;
 			return tags;
 		}
 
@@ -425,21 +425,21 @@ namespace liquicode.AppTools
 		private void LoadPath_Recurse( Guid in_ParentID, List<string> in_PathList, FileSystemItemList out_ItemList, List<Guid> out_IdList )
 		{
 			if( in_PathList.Count == 0 ) { return; }
-			foreach( Guid id in this._BlockStream.BlockIDs )
+			foreach( Guid id in this._BlockStream.GetBlockIDs() )
 			{
 				Hashtable tags = this._BlockStream.GetBlockTags( id );
-				Guid parent_id = (Guid)tags["ParentID"];
-				string entry_name = (string)tags["Name"];
+				Guid parent_id = (Guid)tags[ "ParentID" ];
+				string entry_name = (string)tags[ "Name" ];
 				if( parent_id.Equals( in_ParentID ) )
 				{
-					if( entry_name.Equals( in_PathList[0] ) )
+					if( entry_name.Equals( in_PathList[ 0 ] ) )
 					{
 						in_PathList.RemoveAt( 0 );
 						if( out_ItemList != null )
 						{
 							FileSystemItem entry = this.Tags2Item( tags );
 							if( out_ItemList.Count > 0 )
-							{ entry.Path = out_ItemList[out_ItemList.Count - 1].Pathname; }
+							{ entry.Path = out_ItemList[ out_ItemList.Count - 1 ].Pathname; }
 							out_ItemList.Add( entry );
 						}
 						if( out_IdList != null )
@@ -504,10 +504,10 @@ namespace liquicode.AppTools
 		private FileSystemItemList ListChildren( Guid ParentID, string ParentPath, bool ListFolders )
 		{
 			FileSystemItemList entry_list = new FileSystemItemList();
-			foreach( Guid id in this._BlockStream.BlockIDs )
+			foreach( Guid id in this._BlockStream.GetBlockIDs() )
 			{
 				Hashtable tags = this._BlockStream.GetBlockTags( id );
-				if( ParentID.Equals( (Guid)tags["ParentID"] ) )
+				if( ParentID.Equals( (Guid)tags[ "ParentID" ] ) )
 				{
 					FileSystemItem entry = this.Tags2Item( tags );
 					if( (ListFolders && entry.IsFolder) || (!ListFolders && !entry.IsFolder) )
@@ -539,10 +539,10 @@ namespace liquicode.AppTools
 			// Get parent path and id.
 			string parent_path = "";
 			if( path_entries.Count > 0 )
-			{ parent_path = path_entries[path_entries.Count - 1].Pathname; }
+			{ parent_path = path_entries[ path_entries.Count - 1 ].Pathname; }
 			Guid parent_id = Guid.Empty;
 			if( path_ids.Count > 0 )
-			{ parent_id = path_ids[path_ids.Count - 1]; }
+			{ parent_id = path_ids[ path_ids.Count - 1 ]; }
 			// List child folders and files.
 			FileSystemItemList entry_list = new FileSystemItemList();
 			if( Command.in_IncludeFolders )
