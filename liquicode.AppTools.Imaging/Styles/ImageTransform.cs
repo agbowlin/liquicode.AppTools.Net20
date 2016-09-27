@@ -128,16 +128,11 @@ namespace liquicode.AppTools
 			// Brightness
 			if( Settings.ImageBrightness > 0.0f )
 			{
-				Image new_image_2 = new Bitmap( new_image.Width, new_image.Height, new_image.PixelFormat );
-				using( Graphics graphics = Graphics.FromImage( new_image_2 ) )
-				{
-					Settings.ImagingOptions.CopyTo( graphics );
-					Rectangle rect_image = new Rectangle( 0, 0, new_image.Width, new_image.Height );
-					float brightness = Settings.ImageBrightness;
-					if( brightness < 0.0f ) { brightness = 0.0f; }
-					if( brightness > 1.0f ) { brightness = 1.0f; }
-					new_image_2 = Imaging.ApplyBrightness( new_image, brightness );
-				}
+				Image new_image_2 = null;
+				float brightness = Settings.ImageBrightness;
+				if( brightness < 0.0f ) { brightness = 0.0f; }
+				if( brightness > 1.0f ) { brightness = 1.0f; }
+				new_image_2 = Imaging.ApplyBrightness( new_image, brightness );
 				new_image.Dispose(); // ???
 				new_image = new_image_2;
 			}

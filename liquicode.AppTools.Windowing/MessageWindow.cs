@@ -437,7 +437,7 @@ namespace liquicode.AppTools
 		//--------------------------------------------------------------------
 		public static DialogResult ShowError( IWin32Window Owner, string Text )
 		{
-			return ShowError( Owner, Text );
+			return ShowError( Owner, Text, null );
 		}
 
 
