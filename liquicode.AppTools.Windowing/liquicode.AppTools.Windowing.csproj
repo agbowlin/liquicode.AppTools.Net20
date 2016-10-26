@@ -45,6 +45,9 @@
   <ItemGroup>
     <Compile Include="ApplicationBusy.cs" />
     <Compile Include="ApplicationOptions.cs" />
+    <Compile Include="AutoSizeDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="DockingControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
